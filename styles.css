@@ -56,7 +56,7 @@ label{
 }
 
 .card-container{
-    z-index: 1;
+    z-index: auto;
 }
 
 .card{
@@ -64,10 +64,11 @@ label{
     transform-origin: bottom center;
     transform-style: preserve-3d;
     cursor: pointer;
+    z-index: 1;
 }
 
 .card::before{
-    content: '  ';
+    content: '';
     top: -40px;
     bottom: -40px;
     left: -40px;
@@ -114,23 +115,26 @@ input[type="checkbox"]:checked ~ .wrapper .card:nth-child(5){
 
 input[type="checkbox"]:checked ~ .wrapper .card:nth-child(1):hover{
     transform: translate(-270px, -90px) rotate(0deg) rotateY(0deg);
-    z-index: 2;
+    z-index: 10;
 }
 
 input[type="checkbox"]:checked ~ .wrapper .card:nth-child(2):hover{
-    transform: translate(-270px, -90px) rotate(0deg) rotateY(0deg);
+    transform: translate(-150px, -180px) rotate(0deg) rotateY(0deg);
+    z-index: 10;
 }
 
 input[type="checkbox"]:checked ~ .wrapper .card:nth-child(3):hover{
-    transform: translate(-270px, -270px) rotate(0deg) rotateY(0deg);
+    transform: translate(0px, -180px) rotate(0deg) rotateY(0deg);
+    z-index: 10;
 }
 
 input[type="checkbox"]:checked ~ .wrapper .card:nth-child(4):hover{
     transform: translate(270px, -90px) rotate(0deg) rotateY(0deg);
-    z-index: 2;
+    z-index: 10;
 }
 
 input[type="checkbox"]:checked ~ .wrapper .card:nth-child(5):hover{
     transform: translate(270px, -90px) rotate(0deg) rotateY(0deg);
+    z-index: 10;
 }
 
